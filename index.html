@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Trivia Game</title>
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Playfair+Display|Sedgwick+Ave+Display|Tangerine" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+	<!-- jQuery Google CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+ <body>
+  <!-- this div holds the trivia game title, questions, and game stats -->
+  <div class="jumbotron col-md-8 col-lg-8 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2">
+ <!-- title & start button will be displayed at start of game-->
+    <div id="startPage"> 
+      <h1 class="gameTitle">Trivia!</h1>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Start</a>
+    </div>
+<!-- the countdown timer will be displayed above the quiz questions after the button is clicked and will remain at the top until the time is up -->
+        <div id="questionPage"> 
+         <h1 class="gameTitle">Trivia!</h1>
+<!--the user only has a set time to complete the questions. when the timer runs out, the time is up
+ -->      <h3 id="timer">Time Remaining: 0</h3>
+          <form id="PotterForm">
+          <p>How does Harry manage to breathe underwater during the second task of the Triwizard Tournament?</p>
+            <input type="radio" name="underwater" value="wrong"> He transfigures into a shark&nbsp;&nbsp;
+            <input type="radio" name="underwater" value="wrong"> He kisses a mermaid&nbsp;&nbsp;
+            <input type="radio" name="underwater" value="right" > He eats gillyweed&nbsp;&nbsp;
+            <input type="radio" name="underwater" value="wrong"> He performs a Bubble-Head charm&nbsp;&nbsp;
+          <br><br>
+           <p>What is the name of Fred and George's joke shop?</p>
+            <input type="radio" name="joke" value="wrong"> Weasley Joke Emporium&nbsp;&nbsp;
+            <input type="radio" name="joke" value="right"> Weasley's Wizard Wheezes&nbsp;&nbsp;
+            <input type="radio" name="joke" value="wrong"> Fred and George's Wonder Emporium&nbsp;&nbsp;
+            <input type="radio" name="joke" value="wrong"> Zonko's Joke Shop&nbsp;&nbsp;
+          <br><br>
+           <p>Which of these is NOT one of the Unforgivable Curses?</p>
+            <input type="radio" name="curses" value="wrong"> Cruciatus Curse&nbsp;&nbsp;
+            <input type="radio" name="curses" value="wrong"> Imperius Curse&nbsp;&nbsp;
+            <input type="radio" name="curses" value="right"> Sectumsempra&nbsp;&nbsp;
+            <input type="radio" name="curses" value="wrong"> Avada Kedavra&nbsp;&nbsp;
+            <input type="submit">
+          </form>
+    <!-- the game stats will be displayed once the timer is up -->
+            <div id="resultsPage"> 
+              <h1 class="gameTitle">Trivia!</h1>
+              <h3 id="correct">Correct: 0</h3>
+              <h3 id="incorrect">Incorrect: 0</h3>
+              <h3 id="unanswered">Unanswered: 0</h3>
+            </div>
+  </div>
+  
+    <!-- Bootstrap JS MaxCDN -->
+ 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap latest compiled and minified CSS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="assets/js/app.js"></script> 
+  </body>
+ </html>
