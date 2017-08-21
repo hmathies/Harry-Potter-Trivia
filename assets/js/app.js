@@ -24,7 +24,7 @@
             $("#timer").html("<h3>" + "Time Remaining: " + timeRemaining + "</h3>"); 
             if (timeRemaining === 0 ) {
             stop();
-           //displays the results to the screen (i can't access the html)
+           //captures the results to the screen (i can't access the html)
             $("#correct").html("<h3>" + "Correct: " + correct + "</h3>");
             $("#incorrect").html("<h3>" + "Incorrect: " + incorrect + "</h3>");
             $("#unanswered").html("<h3>" + "Unanswered: " + unanswered + "</h3>");
@@ -81,8 +81,9 @@
             }
            
           })
-         
+         // displaying the results to the screen
            function displayResults () {
               $("#resultsPage").show();
+              $('#questionPage').css({display: 'none'});
            }
     });
