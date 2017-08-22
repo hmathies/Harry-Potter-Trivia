@@ -14,15 +14,15 @@
 </head>
  <body>
   <!-- this div holds the trivia game title, questions, and game stats -->
-  <div class="jumbotron col-md-8 col-lg-8 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2">
+  <div class=" jumbotron col-md-8 col-lg-8 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2">
  <!-- title & start button will be displayed at start of game-->
     <div id="startPage"> 
-      <h1 class="gameTitle">Trivia!</h1>
+      <h1 class="gameTitle">Harry Potter Trivia!</h1>
       <a class="btn btn-primary btn-lg" href="#" role="button">Start</a>
     </div>
 <!-- the countdown timer will be displayed above the quiz questions after the button is clicked and will remain at the top until the time is up -->
         <div id="questionPage"> 
-         <h1 class="gameTitle">Trivia!</h1>
+         <h1 class="gameTitle">Harry Potter Trivia!</h1>
 <!--the user only has a set time to complete the questions. when the timer runs out, the time is up
  -->      <h3 id="timer">Time Remaining: 0</h3>
           <form id="PotterForm">
@@ -43,17 +43,42 @@
             <input type="radio" name="curses" value="wrong"> Imperius Curse&nbsp;&nbsp;
             <input type="radio" name="curses" value="right"> Sectumsempra&nbsp;&nbsp;
             <input type="radio" name="curses" value="wrong"> Avada Kedavra&nbsp;&nbsp;
+            <br><br>
+           <p>Who played Lord Voldemort in the movies?</p>
+            <input type="radio" name="Voldemort" value="wrong"> Jeremy Irons&nbsp;&nbsp;
+            <input type="radio" name="Voldemort" value="wrong"> Tom Cruise&nbsp;&nbsp;
+            <input type="radio" name="Voldemort" value="wrong"> Gary Oldman&nbsp;&nbsp;
+            <input type="radio" name="Voldemort" value="right"> Ralph Fiennes&nbsp;&nbsp;
+          <br><br>
+          <p>Who guards the entrance to the Gryffindor common room?</p>
+            <input type="radio" name="guards" value="wrong"> The Grey Lady&nbsp;&nbsp;
+            <input type="radio" name="guards" value="wrong"> The Fat Friar&nbsp;&nbsp;
+            <input type="radio" name="guards" value="wrong"> The Bloody Baron&nbsp;&nbsp;
+            <input type="radio" name="guards" value="right"> The Fat Lady&nbsp;&nbsp;
+          <br><br>
+           <p>What does Ron see in the Mirror of Erised?</p>
+            <input type="radio" name="Ron" value="wrong">Himself kissing Hermione&nbsp;&nbsp;
+            <input type="radio" name="Ron" value="wrong">Himself with lots of money&nbsp;&nbsp;
+            <input type="radio" name="Ron" value="wrong">Himself with Harry's lightning bolt scar&nbsp;&nbsp;
+            <input type="radio" name="Ron" value="right">Himself holding the Quidditch Cup&nbsp;&nbsp;
+          <br><br>
+           <p>Who is NOT a member of the Order of the Phoenix?</p>
+            <input type="radio" name="Phoenix" value="right">Cornelius Fudge &nbsp;&nbsp;
+            <input type="radio" name="Phoenix" value="wrong">Mad-Eye Moody &nbsp;&nbsp;
+            <input type="radio" name="Phoenix" value="wrong">Professor Snape &nbsp;&nbsp;
+            <input type="radio" name="Phoenix" value="right">Remus Lupin &nbsp;&nbsp;
+          <br><br>
             <input type="submit">
           </form>
     <!-- the game stats will be displayed once the timer is up -->
            </div> 
            <div id="resultsPage"> 
-              <h1 class="gameTitle">Trivia!</h1>
+              <h1 class="gameTitle">Harry Potter Trivia!</h1>
               <h3 id="correct">Correct: 0</h3>
               <h3 id="incorrect">Incorrect: 0</h3>
               <h3 id="unanswered">Unanswered: 0</h3>
             </div>
-  
+  <div>
 
     <!-- Bootstrap JS MaxCDN -->
  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
