@@ -1,11 +1,17 @@
 /*----when the page loads, the trivia div will be displayed with title and start button only*/
 	  $(document).ready(function() {
-          var timeRemaining = 30;
+          var timeRemaining = 60;
           var timerId;
           var correct = 0;
           var incorrect = 0;
           var unanswered = 0; 
 
+         // displaying the results to the screen
+           function displayResults () {
+              $("#resultsPage").show();
+              $('#questionPage').hide();
+           }
+           
           $("#questionPage").hide();
           $("#resultsPage").hide();
       // when the button is clicked, load the trivia questions and begin countdown timer
@@ -23,18 +29,20 @@
             timeRemaining--;
             $("#timer").html("<h3>" + "Time Remaining: " + timeRemaining + "</h3>"); 
             if (timeRemaining === 0 ) {
+            checkAnswers();
             stop();
           } 
          }
-            function stop() {
-              clearInterval(timerId);
-              displayResults();
-          }
-          
-          $('#PotterForm').submit(function(e) {
-            // this command keeps the form on the page after clicking submit
-           e.preventDefault();
-           
+        
+          $('#PotterForm').submit(function( event ) {
+              console.log( "working" );
+              event.preventDefault();
+              checkAnswers();
+              stop();
+          });
+      
+            
+          function checkAnswers(){
             var q1 = $("input[type='radio'][name='underwater']:checked").val();
             var q2 = $("input[type='radio'][name='joke']:checked").val();
             var q3 = $("input[type='radio'][name='curses']:checked").val();
@@ -42,7 +50,6 @@
             var q5 = $("input[type='radio'][name='guards']:checked").val();
             var q6 = $("input[type='radio'][name='Ron']:checked").val();
             var q7 = $("input[type='radio'][name='Phoenix']:checked").val();
-            
             if (q1 === 'right') {
               correct++;
               $("#correct").html("<h3>" + "Correct: " + correct + "</h3>");
@@ -149,14 +156,10 @@
               console.log('incorrect: '+ incorrect);
             }
 
-           displayResults();
-
-          })
-         
-         // displaying the results to the screen
-           function displayResults () {
-              $("#resultsPage").show();
-              $('#questionPage').hide();
+           }
+           function stop() {
+              clearInterval(timerId);
+              displayResults();
            }
            
     });
