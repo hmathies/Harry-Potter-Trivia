@@ -18,13 +18,13 @@
  <!-- title & start button will be displayed at start of game-->
     <div id="startPage"> 
       <h1 class="gameTitle">Harry Potter Trivia!</h1>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Start</a>
+      <a class="btn btn-primary btn-lg btnColor"" href="#" role="button">Start</a>
     </div>
 <!-- the countdown timer will be displayed above the quiz questions after the button is clicked and will remain at the top until the time is up -->
         <div id="questionPage"> 
          <h1 class="gameTitle">Harry Potter Trivia!</h1>
 <!--the user only has a set time to complete the questions. when the timer runs out, the time is up
- -->      <h3 id="timer">Time Remaining: 0</h3>
+ -->      <h3 id="timer">Time Remaining: 60</h3>
           <form id="PotterForm">
           <p>How does Harry manage to breathe underwater during the second task of the Triwizard Tournament?</p>
             <input type="radio" name="underwater" value="wrong"> He transfigures into a shark&nbsp;&nbsp;
@@ -68,7 +68,7 @@
             <input type="radio" name="Phoenix" value="wrong">Professor Snape &nbsp;&nbsp;
             <input type="radio" name="Phoenix" value="right">Remus Lupin &nbsp;&nbsp;
           <br><br>
-            <input type="submit" id="button">
+            <input class="btnColor" type="submit" id="button">
           </form>
     <!-- the game stats will be displayed once the timer is up -->
            </div> 

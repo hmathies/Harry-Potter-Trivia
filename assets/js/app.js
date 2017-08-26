@@ -1,30 +1,31 @@
  /*----when the page loads, the trivia div will be displayed with title and start button only*/
     $(document).ready(function() {
-          var timeRemaining = 10;
+
+          var timeRemaining = 60;
           var timerId;
           var correct = 0;
           var incorrect = 0;
           var unanswered = 0; 
 
-         // displaying the results to the screen
+      // displaying the results to the screen
           function displayResults () {
               $("#resultsPage").show();
               $('#questionPage').hide();
            }
-           
+      //when the page loads do this..
           $("#questionPage").hide();
           $("#resultsPage").hide();
-      // when the button is clicked, load the trivia questions and begin countdown timer
+      //when the button is clicked, load the trivia questions and begin countdown timer
           $('.btn').on("click", function() {
               $("#startPage").hide();
               $("#questionPage").show();
               run(); 
           });
-          /*this function starts the timer*/
+      /*this function starts the timer*/
           function run() {
             timerId = setInterval(decrement, 1000);
           }
-          /*this function has the timer count down*/
+      /*this function has the timer count down*/
           function decrement(){
             timeRemaining--;
             $("#timer").html("<h3>" + "Time Remaining: " + timeRemaining + "</h3>"); 
@@ -51,7 +52,7 @@
             var q6 = $("input[type='radio'][name='Ron']:checked").val();
             var q7 = $("input[type='radio'][name='Phoenix']:checked").val();
             
-               $.each([ q1, q2, q3, q4, q5, q6, q7 ], function( index, value ) {
+            $.each([ q1, q2, q3, q4, q5, q6, q7 ], function( index, value ) {
              if (value === 'right') {
                correct++;
                $("#correct").html("<h3>" + "Correct: " + correct + "</h3>");
@@ -70,6 +71,10 @@
            });
 
            }
+           function clearAnswers() {
+             $('input[type="radio"]').prop("checked", false);
+           } 
+
            function stop() {
               clearInterval(timerId);
               displayResults();
@@ -83,12 +88,12 @@
               $("#resultsPage").hide();
               clearInterval(timerId);
               console.log('working');
+              clearAnswers();
               // $('#questionPage').clear();
-              timeRemaining = 10;
+              timeRemaining = 60;
               timerId;
               correct = 0;
               incorrect = 0;
               unanswered = 0; 
-           }
-           
+           }    
     });
