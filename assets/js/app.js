@@ -78,7 +78,6 @@
            function stop() {
               clearInterval(timerId);
               displayResults();
-              // timerId = setInterval(decrement, 1000);
               setTimeout(reset,1000*5);
               console.log(setTimeout);
            }
@@ -89,7 +88,6 @@
               clearInterval(timerId);
               console.log('working');
               clearAnswers();
-              // $('#questionPage').clear();
               timeRemaining = 60;
               timerId;
               correct = 0;
